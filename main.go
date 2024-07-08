@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-
+	fmt.Println("Hello, World!")
 	go app.StartRecord()
 	web.StartWeb()
 
