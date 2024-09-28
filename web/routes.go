@@ -11,12 +11,12 @@ func WebRoute() {
 
 	http.HandleFunc("/api/filelist", apiFileList)
 
-	http.Handle("/recordings/", http.StripPrefix("/recordings/", http.FileServer(http.Dir("recordings"))))
-	http.Handle("/live/", http.StripPrefix("/live/", http.FileServer(http.Dir("live"))))
+	// http.Handle("/recordings/", http.StripPrefix("/recordings/", http.FileServer(http.Dir("recordings"))))
+	// http.Handle("/live/", http.StripPrefix("/live/", http.FileServer(http.Dir("live"))))
 
-	go func() {
-		for {
-			serveStream(nil, nil)
-		}
-	}()
+	// go func() {
+	// 	for {
+	// 		serveStream(nil, nil)
+	// 	}
+	// }()
 }
